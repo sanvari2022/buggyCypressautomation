@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-26T19:30:26.615Z",
+    "end": "2021-08-26T19:30:34.218Z",
+    "duration": 7603,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9a0cb62b-3401-44f3-b43d-71bcb80cc2c8",
+      "title": "",
+      "fullFile": "cypress/integration/Buggytests/loginpom.spec.js",
+      "file": "cypress/integration/Buggytests/loginpom.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b6d2b095-8b61-424a-825c-1e26cc27f252",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Valid login Test",
+              "fullTitle": "Login Valid login Test",
+              "timedOut": null,
+              "duration": 3314,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(this.data.register.username, this.data.register.password);\ncy.contains('li', 'Hi', +this.data.register.firstname).should('be.visible');\ncy.contains('a', 'Logout').click();",
+              "err": {},
+              "uuid": "dded3c51-74ba-49bf-a33d-165070187553",
+              "parentUUID": "b6d2b095-8b61-424a-825c-1e26cc27f252",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Invalid login Test",
+              "fullTitle": "Login Invalid login Test",
+              "timedOut": null,
+              "duration": 1427,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const randomstring = cy.generateRandomString;\ncy.generateRandomString(10).then(login => {\n  cy.login(login, login);\n  cy.contains('Invalid username/password').should('be.visible');\n});",
+              "err": {},
+              "uuid": "bddedb12-2f33-48fb-b69d-27a43f51f43e",
+              "parentUUID": "b6d2b095-8b61-424a-825c-1e26cc27f252",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dded3c51-74ba-49bf-a33d-165070187553",
+            "bddedb12-2f33-48fb-b69d-27a43f51f43e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4741,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

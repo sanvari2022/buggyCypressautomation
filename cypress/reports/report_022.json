@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-23T09:55:26.206Z",
+    "end": "2021-08-23T09:55:40.123Z",
+    "duration": 13917,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bc7b40ae-ddf6-4469-941f-edbd0bd3c6ba",
+      "title": "",
+      "fullFile": "cypress/integration/Buggytests/votespom.spec.js",
+      "file": "cypress/integration/Buggytests/votespom.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "89d3ccea-0b46-4d10-8584-5173e8a64c2c",
+          "title": "Home page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Click on popular make",
+              "fullTitle": "Home page Click on popular make",
+              "timedOut": null,
+              "duration": 2435,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const PopularMake = new _home.default();\nPopularMake.PopularMake();\ncy.scrollTo('center');\nPopularMake.Make();\ncy.url().should('include', '/make');",
+              "err": {},
+              "uuid": "7f988607-8c84-4987-8e6a-b2d0d7671ced",
+              "parentUUID": "89d3ccea-0b46-4d10-8584-5173e8a64c2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on popular model",
+              "fullTitle": "Home page Click on popular model",
+              "timedOut": null,
+              "duration": 3124,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const PopularModel = new _home.default();\nPopularModel.PopularModel();\ncy.url().should('include', '/model');\nPopularModel.Model();\ncy.contains('You need to be logged in to vote.').should('be.visible');\nPopularModel.PopularModel();\nPopularModel.HomePage();",
+              "err": {},
+              "uuid": "542fcaaa-decf-43a1-90cb-2d3828e32d53",
+              "parentUUID": "89d3ccea-0b46-4d10-8584-5173e8a64c2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on overall rating",
+              "fullTitle": "Home page Click on overall rating",
+              "timedOut": null,
+              "duration": 1737,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const overallRating = new _home.default();\noverallRating.OverallRating();\ncy.url().should('include', '/overall');\noverallRating.Overall();",
+              "err": {},
+              "uuid": "38a864c5-ecf3-4033-8f7a-0bd23974e5af",
+              "parentUUID": "89d3ccea-0b46-4d10-8584-5173e8a64c2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check vote button enabled only when user logged in and not voted earlier",
+              "fullTitle": "Home page Check vote button enabled only when user logged in and not voted earlier",
+              "timedOut": null,
+              "duration": 4676,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const overallRating = new _home.default();\ncy.login(this.data.register.username, this.data.register.password);\noverallRating.HomePage();\noverallRating.OverallRating();\ncy.contains('a', 'View more').click();\ncy.contains('button', 'Vote').should('be.visible');",
+              "err": {},
+              "uuid": "58269ebc-edd0-4296-abed-13cd7f26be00",
+              "parentUUID": "89d3ccea-0b46-4d10-8584-5173e8a64c2c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7f988607-8c84-4987-8e6a-b2d0d7671ced",
+            "542fcaaa-decf-43a1-90cb-2d3828e32d53",
+            "38a864c5-ecf3-4033-8f7a-0bd23974e5af",
+            "58269ebc-edd0-4296-abed-13cd7f26be00"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11972,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

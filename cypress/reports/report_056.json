@@ -1,0 +1,280 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 9,
+    "passes": 9,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-26T19:55:39.829Z",
+    "end": "2021-08-26T19:56:01.979Z",
+    "duration": 22150,
+    "testsRegistered": 9,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c9408def-0a1c-42b6-a04c-3d877604c6b7",
+      "title": "",
+      "fullFile": "cypress/integration/Buggytests/registerpom.spec.js",
+      "file": "cypress/integration/Buggytests/registerpom.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9af3900-ca68-4f5f-b57a-b680afea9aa3",
+          "title": "Register User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Valid Registration",
+              "fullTitle": "Register User Valid Registration",
+              "timedOut": null,
+              "duration": 3328,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const register = new _register.default();\nregister.registerbtn();\ncy.generateRandomString(10).then(data => {\n  register.fillUserName(data);\n  register.fillFirstName(data);\n  register.fillLastName(data);\n});\nregister.fillPassword('Test1234!');\nregister.fillConfirmPassword('Test1234!');\ncy.clickButton('Register');\ncy.contains('Registration is successful').should('be.visible');\ncy.Button('Cancel');\ncy.contains('a', 'Buggy Rating').should('be.visible');",
+              "err": {},
+              "uuid": "a7c9f1a9-1f24-43f6-9b92-512d2b400bc5",
+              "parentUUID": "d9af3900-ca68-4f5f-b57a-b680afea9aa3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Login cannot be more than 50 characters long",
+              "fullTitle": "Register User Check Login cannot be more than 50 characters long",
+              "timedOut": null,
+              "duration": 1620,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const register = new _register.default();\nregister.registerbtn();\ncy.generateRandomString(60).then(data => {\n  register.fillUserName(data);\n  cy.contains('Login cannot be more than 50 characters long').should('be.visible');\n});\ncy.Button('Cancel');",
+              "err": {},
+              "uuid": "8bebc387-2a90-4b82-832f-09e5f9546a00",
+              "parentUUID": "d9af3900-ca68-4f5f-b57a-b680afea9aa3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check registration form validation",
+              "fullTitle": "Register User Check registration form validation",
+              "timedOut": null,
+              "duration": 2460,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const register = new _register.default();\nregister.registerbtn();\nregister.fillUserName('HI');\ncy.get('#username').clear();\ncy.contains('Login is required').should('be.visible');\nregister.fillFirstName('test');\ncy.get('#firstName').clear();\ncy.contains('First Name is required').should('be.visible');\nregister.fillLastName('data');\ncy.get('#lastName').clear(); //cy.contains('Last Name is required').should('be.visible')\nregister.fillPassword('Test1234!');\ncy.get('#password').clear();\ncy.contains('Password is required').should('be.visible');\nregister.fillConfirmPassword('Test1234!');\ncy.get('#confirmPassword').clear();\ncy.contains('Passwords do not match').should('be.visible');",
+              "err": {},
+              "uuid": "59363199-8e7e-45df-b39f-b36cf7525d4e",
+              "parentUUID": "d9af3900-ca68-4f5f-b57a-b680afea9aa3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User already exist",
+              "fullTitle": "Register User User already exist",
+              "timedOut": null,
+              "duration": 2482,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const register = new _register.default();\nregister.registerbtn();\nregister.fillUserName(this.data.register.username);\nregister.fillFirstName('test');\nregister.fillLastName('data');\nregister.fillPassword('Tes1234!');\nregister.fillConfirmPassword('Tes1234!');\ncy.clickButton('Register');\ncy.contains('UsernameExistsException: User already exists').should('be.visible');\ncy.Button('Cancel');\ncy.contains('a', 'Buggy Rating').should('be.visible');",
+              "err": {},
+              "uuid": "527b3644-acb6-48d1-a03f-9f98dc720e07",
+              "parentUUID": "d9af3900-ca68-4f5f-b57a-b680afea9aa3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "147568e4-b670-45fd-8c10-ad50d5863cf0",
+              "title": "Password Validation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Invalid password length",
+                  "fullTitle": "Register User Password Validation Invalid password length",
+                  "timedOut": null,
+                  "duration": 1935,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const register = new _register.default();\nregister.registerbtn();\nregister.fillUserName('HI');\nregister.fillFirstName('test');\nregister.fillLastName('data');\nregister.fillPassword('test');\nregister.fillConfirmPassword('test');\ncy.clickButton('Register');\ncy.contains(\"InvalidParameter: 1 validation error(s) found.\").should('be.visible');\ncy.contains(\"- minimum field size of 6, SignUpInput.Password.\").should('be.visible');",
+                  "err": {},
+                  "uuid": "5dde371b-a6a5-4087-9e7f-4071a32cdf75",
+                  "parentUUID": "147568e4-b670-45fd-8c10-ad50d5863cf0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Password lowercase",
+                  "fullTitle": "Register User Password Validation Password lowercase",
+                  "timedOut": null,
+                  "duration": 2149,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const register = new _register.default();\nregister.registerbtn();\nregister.fillUserName('HI');\nregister.fillFirstName('test');\nregister.fillLastName('data');\nregister.fillPassword('TEST1234!');\nregister.fillConfirmPassword('TEST1234!');\ncy.clickButton('Register');\ncy.contains('InvalidPasswordException: Password did not conform with policy: Password must have lowercase characters').should('be.visible');",
+                  "err": {},
+                  "uuid": "0426e45c-90d4-4a6e-90bc-53dfe96d23e8",
+                  "parentUUID": "147568e4-b670-45fd-8c10-ad50d5863cf0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Password not long enough",
+                  "fullTitle": "Register User Password Validation Password not long enough",
+                  "timedOut": null,
+                  "duration": 2160,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const register = new _register.default();\nregister.registerbtn();\nregister.fillUserName('HI');\nregister.fillFirstName('test');\nregister.fillLastName('data');\nregister.fillPassword('tes@12');\nregister.fillConfirmPassword('tes@12');\ncy.clickButton('Register');\ncy.contains('InvalidPasswordException: Password did not conform with policy: Password not long enough').should('be.visible');",
+                  "err": {},
+                  "uuid": "ee89a017-4bab-4ac5-b1ed-4ae118ab17de",
+                  "parentUUID": "147568e4-b670-45fd-8c10-ad50d5863cf0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Password special characters",
+                  "fullTitle": "Register User Password Validation Password special characters",
+                  "timedOut": null,
+                  "duration": 1968,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const register = new _register.default();\nregister.registerbtn();\nregister.fillUserName('HI');\nregister.fillFirstName('test');\nregister.fillLastName('data');\nregister.fillPassword('tes12');\nregister.fillConfirmPassword('tes12');\ncy.clickButton('Register');\ncy.contains(\"InvalidParameter: 1 validation error(s) found.\").should('be.visible');\ncy.contains(\"- minimum field size of 6, SignUpInput.Password.\").should('be.visible');",
+                  "err": {},
+                  "uuid": "f9e7acf1-f5f5-4754-8316-e0b6207c93d5",
+                  "parentUUID": "147568e4-b670-45fd-8c10-ad50d5863cf0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Password Uppercase",
+                  "fullTitle": "Register User Password Validation Password Uppercase",
+                  "timedOut": null,
+                  "duration": 2163,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const register = new _register.default();\nregister.registerbtn();\nregister.fillUserName('HI');\nregister.fillFirstName('test');\nregister.fillLastName('data');\nregister.fillPassword('test1234!');\nregister.fillConfirmPassword('test1234!');\ncy.clickButton('Register');\ncy.contains('InvalidPasswordException: Password did not conform with policy: Password must have uppercase characters').should('be.visible');",
+                  "err": {},
+                  "uuid": "385cee66-a568-498c-aafb-14fe63289ea4",
+                  "parentUUID": "147568e4-b670-45fd-8c10-ad50d5863cf0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5dde371b-a6a5-4087-9e7f-4071a32cdf75",
+                "0426e45c-90d4-4a6e-90bc-53dfe96d23e8",
+                "ee89a017-4bab-4ac5-b1ed-4ae118ab17de",
+                "f9e7acf1-f5f5-4754-8316-e0b6207c93d5",
+                "385cee66-a568-498c-aafb-14fe63289ea4"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 10375,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "a7c9f1a9-1f24-43f6-9b92-512d2b400bc5",
+            "8bebc387-2a90-4b82-832f-09e5f9546a00",
+            "59363199-8e7e-45df-b39f-b36cf7525d4e",
+            "527b3644-acb6-48d1-a03f-9f98dc720e07"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9890,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

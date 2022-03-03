@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-03T07:57:55.794Z",
+    "end": "2022-03-03T07:58:02.121Z",
+    "duration": 6327,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed389fde-0d43-494b-8782-a961ca4bdec0",
+      "title": "",
+      "fullFile": "cypress/integration/Buggytests/votespage.spec.js",
+      "file": "cypress/integration/Buggytests/votespage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2784385f-c4e6-4824-8b09-104cf382d732",
+          "title": "Votes script for buggycarr",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check vote button enabled only when user logged in and not voted earlier",
+              "fullTitle": "Votes script for buggycarr Check vote button enabled only when user logged in and not voted earlier",
+              "timedOut": null,
+              "duration": 5012,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const overallRating = new _home.default();\nconst button = new _vote.default();\noverallRating.OverallRating();\nbutton.votebutton();\ncy.contains('You need to be logged in to vote.').should('be.visible');\ncy.login(this.data.user.username, this.data.user.password);\noverallRating.HomePage();\noverallRating.OverallRating();\nbutton.votebutton();\ncy.contains('button', 'Vote').should('be.visible');",
+              "err": {},
+              "uuid": "4f65492e-c0cb-4b19-977d-c84c15932ee5",
+              "parentUUID": "2784385f-c4e6-4824-8b09-104cf382d732",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4f65492e-c0cb-4b19-977d-c84c15932ee5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5012,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

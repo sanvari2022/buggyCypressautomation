@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-22T08:12:47.585Z",
+    "end": "2021-08-22T08:13:00.809Z",
+    "duration": 13224,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2487283-fa56-4544-97c4-284943bb61da",
+      "title": "",
+      "fullFile": "cypress/integration/Buggytests/profilepom.spec.js",
+      "file": "cypress/integration/Buggytests/profilepom.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f9b24df2-19bf-4298-879a-7b1210e32ac7",
+          "title": "Profile",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check profile",
+              "fullTitle": "Profile Check profile",
+              "timedOut": null,
+              "duration": 5218,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const profile = new _profile.default();\ncy.login(this.data.register.username, this.data.register.password);\ncy.contains('li', 'Hi', +this.data.register.firstname).should('be.visible');\ncy.contains('a', 'Profile').click();\ncy.url().should('include', '/profile');\nprofile.Gender('Female');\nprofile.Age('30');\ncy.clickButton('Save');\ncy.contains('a', 'Profile').click();\ncy.get('#gender').should('have.value', 'Female');\ncy.get('#age').should('have.value', '30');\ncy.get('#gender').clear();\ncy.get('#age').clear();\ncy.clickButton('Save');",
+              "err": {},
+              "uuid": "ab50f2cb-d37a-45d6-80ea-59ed34fe30fb",
+              "parentUUID": "f9b24df2-19bf-4298-879a-7b1210e32ac7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check hobby",
+              "fullTitle": "Profile Check hobby",
+              "timedOut": null,
+              "duration": 5841,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(this.data.register.username, this.data.register.password);\ncy.contains('li', 'Hi', +this.data.register.firstname).should('be.visible');\ncy.contains('a', 'Profile').click();\ncy.checkHobby();",
+              "err": {},
+              "uuid": "d2715809-e0a5-456d-b7b5-be2fe77ed67e",
+              "parentUUID": "f9b24df2-19bf-4298-879a-7b1210e32ac7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ab50f2cb-d37a-45d6-80ea-59ed34fe30fb",
+            "d2715809-e0a5-456d-b7b5-be2fe77ed67e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11059,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

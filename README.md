@@ -5,7 +5,7 @@
   Cypress framework with Javascript is used to automate the resource https://buggy.justtestit.org/.
   As  An end user functional flow is used in the generation of scripts. An user visits site, register,login, update profile and votes.
   As an Functional automation tester, i have identified bugs in the error messages, validation messages and site.Idenfied bugs are reported in
-  [BugsinBuggytest.docx](https://github.com/svk2021/Cypress-Automation/blob/master/BugsinBuggytest.docx). To View the bugs, please download Word cocument to view all the details of the bugs with screenshots.
+  [BugsinBuggytest.docx](https://github.com/sanvari2022/buggyCypressautomation/blob/master/BugsinBuggytest.docx). To View the bugs, please download Word cocument to view all the details of the bugs with screenshots.
   Please open "BugsinBuggytest.docx" for all 5 bugs/issues.
   
 # Bugs reported
@@ -30,7 +30,7 @@
   # Clone project into local directory
 
   ```
-  git clone https://github.com/svk2021/Buggytestautomation.git
+  git clone https://github.com/sanvari2022/buggyCypressautomation.git
   ```
   # Install nodejs and cypress in your local machine
   * install nodejs : go to https://nodejs.org/en/download/ and install
@@ -69,7 +69,7 @@
   
 
   # Generated reports  can be viewed at this location
-  https://github.com/svk2021/Cypress-Automation/tree/master/cypress/reports
+  https://github.com/sanvari2022/buggyCypressautomation/tree/master/cypress/reports
   
   
   

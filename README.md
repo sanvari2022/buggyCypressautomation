@@ -50,7 +50,8 @@
   
    ```
 
-   [Mocha Awesome Report][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/MochaReport.PNG] can be viewed
+   [Mocha Repor link][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/MochaReport.PNG] can be viewed
+
   
   # Test Cases Covered
   * registered user only can login

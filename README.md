@@ -50,7 +50,7 @@
   
    ```
 
-   [Mocha Awesome Report][https://github.com/svk2021/Cypress-Automation/blob/master/cypress/screenshots/AllTestsexeutionsuccess.PNG] can be viewed
+   [Mocha Awesome Report][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/MochaReport.PNG] can be viewed
   
   # Test Cases Covered
   * registered user only can login

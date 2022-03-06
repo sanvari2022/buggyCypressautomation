@@ -1,9 +1,9 @@
 # Buggytestautomation
 
-# Project Description
+# Project Description and Test Approach
   
   Cypress framework with Javascript is used to automate the resource https://buggy.justtestit.org/.
-  As  An end user functional flow is used in the generation of scripts. An user visits a site, register,login, update profile and vote.
+  As  an end user navigation in buggy test application scenaiors flow is used in the generation of scripts. An user visits a site, register,login, update profile and vote.
   As an Functional automation tester, I have identified bugs in the error messages, validation messages and site.Identified bugs are reported in
   [BugsinBuggytest.docx](https://github.com/sanvari2022/buggyCypressautomation/blob/master/BugsinBuggytest.docx). To View the bugs, please download Word document to view all the details of the bugs with screenshots.
   Please open "BugsinBuggytest.docx" for all 5 bugs/issues.

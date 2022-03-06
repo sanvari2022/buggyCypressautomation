@@ -40,6 +40,7 @@
   ```
     Open the project in Visual Stuido Code
    Click on Terminal -> new Terminal (takes to the project folder location
+   <img src="cypress\screenshots\OpenProjectinVSCode.PNG"
    npx cypress open
    <!-- npx cypress open - will open all tests in new Browser, where all tests can be executed by using browsers like Chrome, Electron or Firefox -->
    ```

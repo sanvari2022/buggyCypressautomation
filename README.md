@@ -43,9 +43,13 @@
    npx cypress open
    <!-- npx cypress open - will open all tests in new Browser, where all tests can be executed by using browsers like Chrome, Electron or Firefox -->
    ```
+<<<<<<< HEAD
    [Test Execution Summary][https://github.com/svk2021/Cypress-Automation/blob/master/cypress/screenshots/AwesomeReport.PNG] screenshot can be viewed
 
-<img src ="cypress\screenshots\awesomeReport.PNG" width ="100">
+<img src ="cypress\screenshots\awesomeReport.PNG" width="100">
+
+
+   [Test Execution Summary][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/awesomeReport.PNG] screenshot can be viewed
 
   # Run Tests in  Headless mode,execution generates Mocha Awesome Reports
    npx cypress run

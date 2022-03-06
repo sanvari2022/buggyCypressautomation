@@ -38,11 +38,15 @@
   * npm install cypress
   # Run Cypress with Test Runner
   ```
-   cd /project folder
+    Open the project in Visual Stuido Code
+   Click on Terminal -> new Terminal (takes to the project folder location
    npx cypress open
    <!-- npx cypress open - will open all tests in new Browser, where all tests can be executed by using browsers like Chrome, Electron or Firefox -->
    ```
    [Test Execution Summary][https://github.com/svk2021/Cypress-Automation/blob/master/cypress/screenshots/AwesomeReport.PNG] screenshot can be viewed
+
+<img src ="cypress\screenshots\awesomeReport.PNG" width ="100">
+
   # Run Tests in  Headless mode,execution generates Mocha Awesome Reports
    npx cypress run
    ```
@@ -51,7 +55,7 @@
    ```
 
    [Mocha Repor link][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/MochaReport.PNG] can be viewed
-
+  <img src="cypress\screenshots\MochaReport.PNG" width="100">
   
   # Test Cases Covered
   * registered user only can login
@@ -71,6 +75,7 @@
 
   # Generated reports  can be viewed at this location
   https://github.com/sanvari2022/buggyCypressautomation/tree/master/cypress/reports
+  
   
   
   

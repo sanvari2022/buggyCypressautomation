@@ -36,7 +36,8 @@
   * install nodejs : go to https://nodejs.org/en/download/ and install
   * Download visual studio code https://code.visualstudio.com/download
   * npm install cypress
-  # Run Cypress with Test Runner
+  Run Cypress with Test Runner
+    <img src="cypress\screenshots\OpenProjectinVSCode.PNG">
   ```
     Open the project in Visual Stuido Code
    Click on Terminal -> new Terminal (takes to the project folder location
@@ -44,13 +45,12 @@
    npx cypress open
    <!-- npx cypress open - will open all tests in new Browser, where all tests can be executed by using browsers like Chrome, Electron or Firefox -->
    ```
-<<<<<<< HEAD
-   [Test Execution Summary][https://github.com/svk2021/Cypress-Automation/blob/master/cypress/screenshots/AwesomeReport.PNG] screenshot can be viewed
-
-<img src ="cypress\screenshots\awesomeReport.PNG">
 
 
-   [Test Execution Summary][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/awesomeReport.PNG] screenshot can be viewed
+# Test Execution Summary screenshot can be viewed
+
+  <img src ="cypress\screenshots\awesomeReport.PNG">
+
 
   # Run Tests in  Headless mode,execution generates Mocha Awesome Reports
    npx cypress run
@@ -59,7 +59,7 @@
   
    ```
 
-   [Mocha Repor link][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/MochaReport.PNG] can be viewed
+  # Mocha Report
   <img src="cypress\screenshots\MochaReport.PNG" >
   
   # Test Cases Covered

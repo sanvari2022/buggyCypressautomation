@@ -46,7 +46,7 @@
 <<<<<<< HEAD
    [Test Execution Summary][https://github.com/svk2021/Cypress-Automation/blob/master/cypress/screenshots/AwesomeReport.PNG] screenshot can be viewed
 
-<img src ="cypress\screenshots\awesomeReport.PNG" width="100">
+<img src ="cypress\screenshots\awesomeReport.PNG">
 
 
    [Test Execution Summary][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/awesomeReport.PNG] screenshot can be viewed
@@ -59,7 +59,7 @@
    ```
 
    [Mocha Repor link][https://github.com/sanvari2022/buggyCypressautomation/blob/master/cypress/screenshots/MochaReport.PNG] can be viewed
-  <img src="cypress\screenshots\MochaReport.PNG" width="100">
+  <img src="cypress\screenshots\MochaReport.PNG" >
   
   # Test Cases Covered
   * registered user only can login
